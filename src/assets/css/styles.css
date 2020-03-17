@@ -1,0 +1,71 @@
+/* 
+  BUTTONS
+*/
+
+.btn-light-green{
+  background-color: #18bc87;
+  color: #333;
+  border: none;
+}
+
+.btn-light-green:hover{
+  background-color: #18bc88;
+  color: #333;
+  border: none;
+}
+
+.btn-orange{
+  background-color: #f8ae45 !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+.btn-orange:hover{
+  background-color: #f8ae45;
+  color: #fff !important;
+  border: none !important;
+}
+
+.card-profile{
+  border: 1px solid #fff;
+  border-radius: 4px !important;
+  margin-top: 0px !important;
+}
+
+#planos{
+  background: #18bc87;
+  color: #fff !important;
+}
+
+#planos .title{
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.author h2{
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.author .card-category{
+  color: #fff !important;
+}
+
+.icon-light-green{
+  color: #18bc87 !important;
+}
+
+.btn-navbar{
+  background-color: #f8ae45 !important;
+  color: #fff !important;
+  border: none !important;
+  opacity: 1.0;
+  border-radius: .25rem;
+}
+
+.btn-navbar:hover{
+  background-color: #f8ae45 !important;
+  color: #fff !important;
+  border: none !important;
+  opacity: 1.0;
+}
