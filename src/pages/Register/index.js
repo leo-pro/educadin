@@ -23,6 +23,8 @@ import { Button, Card, Form, Input, Container, Row, Col } from "reactstrap";
 
 import './styles.css';
 
+import logo from '../../assets/img/logo.png';
+
 function Register() {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
@@ -43,8 +45,8 @@ function Register() {
         <Container>
           <Row>
             <Col className="ml-auto mr-auto" lg="8">
-              <img src="" alt=""/>
               <Card className="card-register ml-auto mr-auto">
+                <img src={logo} alt="Educadin - educação financeira para jovens e crianças"/>
                 <Form className="register-form">
                   <label>Nome</label>  
                   <Input placeholder="Nome" type="text" />

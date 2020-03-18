@@ -23,6 +23,8 @@ import { Button, Card, Form, Input, Container, Row, Col } from "reactstrap";
 
 import './styles.css';
 
+import logo from '../../assets/img/logo.png';
+
 function Login() {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
@@ -42,11 +44,9 @@ function Login() {
         <div className="filter" />
         <Container>
           <Row>
-            <Col className="ml-auto mr-auto" lg="8"> 
-              <h1>LOGO</h1>
-            </Col>
             <Col className="ml-auto mr-auto" lg="8">
               <Card className="card-register ml-auto mr-auto">
+                <img src={logo} alt="Educadin - educação financeira para jovens e crianças"/>
                 <Form className="register-form">
                   <label>Email</label>
                   <Input placeholder="Email" type="text" />
