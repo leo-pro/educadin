@@ -22,6 +22,8 @@ import React from "react";
 // reactstrap components
 import { Row, Container } from "reactstrap";
 
+import buildLabLogo from '../../assets/img/ass-preto.png';
+
 function FooterDefault() {
   return (
     <footer className="footer footer-black footer-white">
@@ -81,7 +83,9 @@ function FooterDefault() {
           </nav>
           <div className="credits ml-auto">
             <span className="copyright">
-              © {new Date().getFullYear()} by <a href="https://buildlab.com.br">BUILDLAB</a>
+              <a href="https://buildlab.com.br" target="_blank" rel="noopener noreferrer">
+                <img src={buildLabLogo} alt="" style={{ width: '150px', height: '40px'}}/>
+              </a>
             </span>
           </div>
         </Row>

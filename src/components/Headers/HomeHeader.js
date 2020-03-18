@@ -40,6 +40,10 @@ function HomeHeader() {
     }
   });
 
+  function handleScroll(target){
+    document.getElementById(target).scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <>
       <div
@@ -57,7 +61,7 @@ function HomeHeader() {
             <h3>Plataforma de educação financeira para jovens e crianças.</h3>
             <br />
             <Button
-              href="#oquee"
+              onClick={() => handleScroll('oquee')}
               className="btn mr-1"
               color="neutral"
               outline

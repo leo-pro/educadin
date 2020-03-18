@@ -18,12 +18,12 @@
 */
 import React from "react";
 
-// reactstrap components
 import { Button, Card, Form, Input, Container, Row, Col } from "reactstrap";
 
 import './styles.css';
 
 import logo from '../../assets/img/logo.png';
+import buildLabLogo from '../../assets/img/ass-amarelo.png';
 
 function Register() {
   document.documentElement.classList.remove("nav-open");
@@ -74,9 +74,9 @@ function Register() {
           </Row>
         </Container>
         <div className="footer register-footer text-center">
-          <h6>
-            © {new Date().getFullYear()} by <a href="https://buildlab.com.br" target="_blank" rel="noopener noreferrer">BuildLab</a>
-          </h6>
+          <a href="https://buildlab.com.br" target="_blank" rel="noopener noreferrer">
+            <img src={buildLabLogo} alt="" style={{ width: '135px', height: '35px'}}/>
+          </a>
         </div>
       </div>
     </>

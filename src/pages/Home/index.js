@@ -16,7 +16,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 // reactstrap components
 import {
@@ -35,24 +35,40 @@ import {
   Col
 } from "reactstrap";
 
+import { useScrollToTop } from '../../utils';
+
 // core components
 import NavbarDefault from "components/Navbars/NavbarDefault.js";
 import HomeHeader from "components/Headers/HomeHeader.js";
 import FooterDefault from "components/Footers/FooterDefault.js";
 
+
 import '../../assets/css/styles.css';
 
 function Home() {
+  const setScrollToTop = useScrollToTop(true);
+
   document.documentElement.classList.remove("nav-open");
-  React.useEffect(() => {
+  
+  useEffect(() => {
     document.body.classList.add("profile-page");
-    return function cleanup() {
-      document.body.classList.remove("profile-page");
-    };
-  });
+  }, [setScrollToTop]);
+
+  function handleScroll(target){
+    document.getElementById(target).scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <>
       <NavbarDefault />
+      <Button 
+        title="Voltar ao topo" 
+        size="sm" 
+        className="btn-orange" 
+        id="btn-top" 
+        style={{ position: 'fixed', left: '93%', top: '90%', zIndex: 1000, display: 'none'}}
+        onClick={() => setScrollToTop(true)}>
+        <i className="fa fa-angle-up" style={{ fontSize: '32px'}}></i>
+      </Button>
       <HomeHeader />
       <div className="main" id="oquee">
         <div className="section text-center">
@@ -69,7 +85,7 @@ function Home() {
                 <br />
                 <Button
                   className="btn-orange"
-                  href="#planos"
+                  onClick={() => handleScroll('planos')}
                 >
                   Veja os Planos
                 </Button>
@@ -219,11 +235,11 @@ function Home() {
             </Row>
           </Container>
         </div>
-        <div className="section landing-section">
+        <div className="section landing-section" id="parceiros">
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
-                <h2 className="text-center">Você é professor, tem escola ou é uma empresa? Tem interesse em ser parceiro e apoiador do projeto?</h2>
+                <h2 className="text-center">Você é professor, tem escola ou uma empresa? Tem interesse em ser parceiro e apoiador do projeto? Entre em contato</h2>
                 <Form className="contact-form">
                   <Row>
                     <Col md="6">

@@ -16,7 +16,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 // nodejs library that concatenates strings
 import classnames from "classnames";
@@ -47,7 +47,11 @@ function NavbarDefault() {
     document.documentElement.classList.toggle("nav-open");
   };
 
-  React.useEffect(() => {
+  const handleScroll = (target) => {
+    document.getElementById(target).scrollIntoView({ behavior: "smooth" });
+  }
+
+  useEffect(() => {
     const updateNavbarColor = () => {
       if (
         document.documentElement.scrollTop > 299 ||
@@ -106,22 +110,22 @@ function NavbarDefault() {
         >
           <Nav navbar>
             <NavItem>
-              <NavLink to="#oquee" tag={Link}>
+              <NavLink to="" onClick={() => handleScroll('oquee')} tag={Link}>
                 O que é?
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="#oquee" tag={Link}>
+              <NavLink to="" onClick={() => handleScroll('oquee')} tag={Link}>
                 Módulos
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/#planos" tag={Link}>
+              <NavLink to="" onClick={() => handleScroll('planos')} tag={Link}>
                 Planos
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/#parceiros" tag={Link}>
+              <NavLink to="" onClick={() => handleScroll('parceiros')} tag={Link}>
                 Parceiros
               </NavLink>
             </NavItem>
