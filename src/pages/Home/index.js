@@ -42,8 +42,14 @@ import NavbarDefault from "components/Navbars/NavbarDefault.js";
 import HomeHeader from "components/Headers/HomeHeader.js";
 import FooterDefault from "components/Footers/FooterDefault.js";
 
-
 import '../../assets/css/styles.css';
+
+import info1 from '../../assets/img/infografico-1.png';
+import info2 from '../../assets/img/infografico-2.png';
+import info3 from '../../assets/img/infografico-3.png';
+import info4 from '../../assets/img/infografico-4.png';
+import info5 from '../../assets/img/infografico-5.png';
+
 
 function Home() {
   const setScrollToTop = useScrollToTop(true);
@@ -94,73 +100,14 @@ function Home() {
             <br />
             <br />
             <Row>
-              <Col md="3">
-                <div className="info">
-                  <div className="icon icon-light-green">
-                    <i className="nc-icon nc-album-2" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Kids</h4>
-                    <p className="description">
-                      Spend your time generating new ideas. You don't have to
-                      think of implementing.
-                    </p>
-                    <Button className="btn-link" href="#pablo">
-                      Veja Mais
-                    </Button>
-                  </div>
-                </div>
+              <Col md="4">
+                <img src={info1} alt=""/>
               </Col>
-              <Col md="3">
-                <div className="info">
-                  <div className="icon icon-light-green">
-                    <i className="nc-icon nc-bulb-63" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Teens</h4>
-                    <p>
-                      Larger, yet dramatically thinner. More powerful, but
-                      remarkably power efficient.
-                    </p>
-                    <Button className="btn-link" href="#pablo">
-                      Veja Mais
-                    </Button>
-                  </div>
-                </div>
+              <Col md="4">
+                <img src={info2} alt=""/>
               </Col>
-              <Col md="3">
-                <div className="info">
-                  <div className="icon icon-light-green">
-                    <i className="nc-icon nc-chart-bar-32" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Youngs</h4>
-                    <p>
-                      Choose from a veriety of many colors resembling sugar
-                      paper pastels.
-                    </p>
-                    <Button className="btn-link" href="#pablo">
-                      Veja Mais
-                    </Button>
-                  </div>
-                </div>
-              </Col>
-              <Col md="3">
-                <div className="info">
-                  <div className="icon icon-light-green">
-                    <i className="nc-icon nc-sun-fog-29" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Investidor</h4>
-                    <p>
-                      Find unique and handmade delightful designs related items
-                      directly from our sellers.
-                    </p>
-                    <Button className="btn-link" href="#pablo">
-                      Veja Mais
-                    </Button>
-                  </div>
-                </div>
+              <Col md="4">
+                <img src={info3} alt=""/>
               </Col>
             </Row>
           </Container>
