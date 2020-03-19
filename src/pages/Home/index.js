@@ -100,6 +100,11 @@ function Home() {
             <br />
             <br />
             <Row>
+              <Col className="ml-auto mr-auto">
+                <h2 className="title">Educação Financeira no Brasil</h2>
+              </Col>
+            </Row>
+            <Row>
               <Col md="4">
                 <img src={info1} alt=""/>
               </Col>
@@ -108,6 +113,14 @@ function Home() {
               </Col>
               <Col md="4">
                 <img src={info3} alt=""/>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={{ size: 4, offset: 2}}>
+                <img src={info4} alt=""/>
+              </Col>
+              <Col md={{ size: 4, offset: 0}}>
+                <img src={info5} alt=""/>
               </Col>
             </Row>
           </Container>
